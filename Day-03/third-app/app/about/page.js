@@ -7,3 +7,7 @@ const page = () => {
 };
 
 export default page;
+export const metadata = {
+  title: "About  the world",
+  description: "This is facebook about page and we can get know with the world using facebook",
+};
