@@ -1,23 +1,12 @@
-import fs from "fs/promises";
-
-// ✅ Top-level server action function
-export async function submitAction(formData) {
-  "use server";
-
-  const name = formData.get("name");
-  const address = formData.get("address");
-
-  console.log("Form Data:", name, address);
-
-  // Server-side file write
-  await fs.writeFile("myFile.txt", `Name: ${name}, Address: ${address}`);
-}
+"use client"
+import { submitAction } from "@/actions/form";
+import { useRef } from "react";
 
 export default function Home() {
+  let ref = useRef()
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
-      <form
-        action={submitAction} // ✅ directly pass exported server action
+      <form ref={ref} action={(e) => { submitAction(e); ref.current.reset() }}
         className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md space-y-6"
       >
         <h1 className="text-2xl font-bold text-gray-800 text-center">
