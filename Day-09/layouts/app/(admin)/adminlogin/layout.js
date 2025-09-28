@@ -1,0 +1,1 @@
+// No need to create as we use meta data of nextjs
