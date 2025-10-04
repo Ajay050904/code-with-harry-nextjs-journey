@@ -40,6 +40,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 This is default behaviour
 
 ## SSG - Static side Generation
+Any content which does not have network calls is a static page by default
 
-
-## ISR -  side 
+## ISR or ISG - Incremental static Regeneration or Incremental side Generation
