@@ -4,7 +4,6 @@ import React from 'react'
 const About = () => {
     return (
         <div>
-
             <div className='container'>
 
                 <h1>This is about me</h1>
@@ -21,7 +20,7 @@ const About = () => {
             <div className="container">
                 Hey I am good
             </div>
-        </div> 
+        </div>
     )
 }
 
